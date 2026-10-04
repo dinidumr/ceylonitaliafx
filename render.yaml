@@ -1,12 +1,13 @@
 services:
   - type: web
-    name: ceylonitaliafx
+    name: nodejs-web-service
     runtime: node
     plan: free
+    region: frankfurt
     buildCommand: npm install
     startCommand: npm start
     envVars:
-      - key: PORT
-        value: 10000
       - key: NODE_ENV
         value: production
+      - key: PORT
+        value: 10000
